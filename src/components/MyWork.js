@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 
 function MyWork() {
 
@@ -115,12 +115,11 @@ function MyWork() {
          {/* Hint link for more info */}
          <p className="mb-4 text-sm text-gray-600">
            Want to know more information about my experience?{" "}
-           <a
-             href="/experience"
+           <Link to="/experience"
              className="text-blue-600 hover:underline"
            >
              Click here
-           </a>.
+           </Link>.
          </p>
 
       </motion.div>
