@@ -89,7 +89,7 @@ function Home() {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 transition"
             >
-              GitHub
+              View GitHub
             </a>
 
             {/* Experience */}

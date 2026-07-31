@@ -16,14 +16,7 @@ function NavigationBar() {
         Home
       </NavLink>
       <div className="space-x-6">
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `font-medium ${isActive ? activeClass : "text-gray-900"}`
-          }
-        >
-          About
-        </NavLink>
+
         <NavLink
           to="/skills"
           className={({ isActive }) =>
