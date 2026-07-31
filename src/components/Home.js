@@ -67,6 +67,15 @@ function Home() {
             technologies.
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.35 }}
+            className="text-lg text-gray-700 mb-5"
+          >
+            📍 Toronto, Ontario, Canada
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
