@@ -75,7 +75,7 @@ function Home() {
           >
             {/* Resume */}
             <a
-              href="/Sai_Kiran_Singh_Thakur_Resume.pdf"
+              href={`${process.env.PUBLIC_URL}/Sai_Kiran_Singh_Thakur_Resume.pdf`}
               download
               className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
             >
