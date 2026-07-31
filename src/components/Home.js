@@ -92,12 +92,12 @@ function Home() {
               GitHub
             </a>
 
-            {/* Projects */}
+            {/* Experience */}
             <Link
-              to="/projects"
+              to="/Experience"
               className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
             >
-              My Projects
+              My Experience
             </Link>
 
             {/* Contact */}
