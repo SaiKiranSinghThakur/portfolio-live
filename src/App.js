@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import NavigationBar from "./components/NavigationBar";
-import MyWork from "./components/MyWork"
+
 
 // layout component to handle spacing for fixed navbar
 function Layout({ children }){
@@ -20,7 +20,7 @@ export default function App() {
       <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/myWork" element={<MyWork />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/experience" element={<Experience />} />
