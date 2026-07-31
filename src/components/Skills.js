@@ -1,50 +1,163 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function Skills() {
-
-  const technologies = [
-    { category: "Programming Languages", Technology: "Java 8 and Later"},
-    { category: "Frameworks / Libraries", Technology: "Spring Boot Security, Spring Data JPA, Hibernate / JPA, Spring WebFlux / Kafka, Spring Cloud (OpenFeign / Gateway)"},
-    { category: "Databases", Technology: "SQL (Oracle/MySQL/PostgreSQL), Liquibase"},
-    { category: "DevOps / Tools", Technology: "Docker, Git / GitHub / Bitbucket, Jenkins, Maven, Prometheus"},
-    { category: "Mapping / Transformation", Technology: "MapStruct / ModelMapper"},
-    { category: "Software Practices / Concepts", Technology: "Design patterns, Data structures, Agile / Scrum"}
+  const skillGroups = [
+    {
+      category: "Backend Development",
+      skills: [
+        "Java 8",
+        "Java 11",
+        "Spring",
+        "Spring Boot",
+        "Spring MVC",
+        "Hibernate",
+        "JDBC",
+        "RESTful APIs",
+        "Microservices",
+        "Apache Kafka",
+      ],
+    },
+    {
+      category: "Databases",
+      skills: ["Oracle", "MySQL", "PostgreSQL", "SQL"],
+    },
+    {
+      category: "Cloud Technologies",
+      skills: [
+        "Amazon Web Services (AWS)",
+        "Microsoft Azure",
+        "Google Cloud Platform (GCP)",
+      ],
+    },
+    {
+      category: "DevOps & Build Tools",
+      skills: [
+        "Docker",
+        "Maven",
+        "Jenkins",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+      ],
+    },
+    {
+      category: "Testing",
+      skills: ["JUnit", "Mockito", "Swagger"],
+    },
+    {
+      category: "Frontend Technologies",
+      skills: [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "Angular",
+        "React.js",
+        "Node.js",
+      ],
+    },
+    {
+      category: "Development Tools",
+      skills: [
+        "IntelliJ IDEA",
+        "Eclipse",
+        "Spring Tool Suite",
+        "Jira",
+        "Confluence",
+      ],
+    },
+    {
+      category: "Development Practices",
+      skills: [
+        "Agile",
+        "Scrum",
+        "Kanban",
+        "Code Reviews",
+        "Unit Testing",
+        "CI/CD",
+      ],
+    },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
 
-  return(
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
 
-      <section className="min-h-screen bg-gradient-to-r from-amber-100 via-orange-200 to-rose-100 flex justify-center py-12 pt-[75px]">
+  return (
+    <section className="min-h-screen bg-gradient-to-r from-amber-100 via-orange-200 to-rose-100 px-6 py-16 pt-[95px]">
+      <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="w-[210mm] max-w-full bg-white/30 backdrop-blur-md rounded-xl shadow-xl px-8 py-8 overflow-auto"
+          transition={{ duration: 0.7 }}
+          className="mb-10 text-center"
         >
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Technical Skills
+          </h1>
 
-        {/* 3. Skills */}
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="text-3xl font-semibold mb-4 text-gray-900 text-left"
+          <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+            Technologies and tools I use to design, develop, test, and deploy
+            reliable backend applications.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          Technologies
-        </motion.h2>
-        <motion.ul
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.7 }}
-        className="mb-8 text-gray-800 text-lg space-y-2 font-sans"
-         >
-         {technologies.map((tool, idx) => (
-         <li key={idx}>
-         <span className="font-medium">{tool.category}</span>: {tool.Technology}
-         </li>
-         ))}
-         </motion.ul>
-      </motion.div>
+          {skillGroups.map((group) => (
+            <motion.article
+              key={group.category}
+              variants={cardVariants}
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.2 },
+              }}
+              className="rounded-2xl bg-white/70 border border-white/80 shadow-lg p-6"
+            >
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                {group.category}
+              </h2>
+
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full bg-blue-50 border border-blue-200 px-3 py-1.5 text-sm font-medium text-blue-800"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
