@@ -19,6 +19,12 @@ function Experience() {
         "Performed peer code reviews and collaborated with QA, Business Analysts, and Solution Architects.",
         "Contributed to the migration of application components from Java 8 to Java 11.",
       ],
+      teamCollaboration: [
+        "Collaborated with Business Analysts, Solution Architects, QA Engineers, and distributed development teams across Canada, the United States, and India to deliver client-specific business requirements.",
+        "Worked closely with offshore QA teams to investigate defects, validate fixes, and support monthly production releases.",
+        "Participated in Agile Scrum ceremonies including sprint planning, daily stand-ups, sprint reviews, and retrospectives.",
+        "Performed peer code reviews, shared technical knowledge with new team members, and collaborated on solution discussions during Scrum meetings.",
+      ],
       technologies: [
         "Java 8",
         "Java 11",
