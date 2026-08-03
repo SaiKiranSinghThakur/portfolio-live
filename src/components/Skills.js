@@ -4,13 +4,17 @@ import { motion } from "framer-motion";
 function Skills() {
   const skillGroups = [
     {
+      category: "Programming Languages",
+      skills: ["Java 8", "Java 11", "Java 21", "SQL"],
+    },
+    {
       category: "Backend Development",
       skills: [
-        "Java 8",
-        "Java 11",
-        "Spring",
+        "Spring Framework",
         "Spring Boot",
         "Spring MVC",
+        "Spring JDBC",
+        "Spring Batch",
         "Hibernate",
         "JDBC",
         "RESTful APIs",
@@ -19,8 +23,24 @@ function Skills() {
       ],
     },
     {
+      category: "Business Rules & Platforms",
+      skills: [
+        "Drools Rules Engine",
+        "Guidewire ClaimCenter",
+        "Defined Benefits",
+        "DB Calc Engine",
+      ],
+    },
+    {
       category: "Databases",
-      skills: ["Oracle", "MySQL", "PostgreSQL", "SQL"],
+      skills: [
+        "Oracle",
+        "MySQL",
+        "PostgreSQL",
+        "SQL Server",
+        "Stored Procedures",
+        "Database Packages",
+      ],
     },
     {
       category: "Cloud Technologies",
@@ -40,23 +60,23 @@ function Skills() {
         "GitHub",
         "GitLab",
         "Bitbucket",
+        "CI/CD",
       ],
     },
     {
-      category: "Testing",
-      skills: ["JUnit", "Mockito", "Swagger"],
-    },
-    {
-      category: "Frontend Technologies",
+      category: "Testing & API Tools",
       skills: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "JavaScript",
-        "Angular",
-        "React.js",
-        "Node.js",
+        "JUnit",
+        "Mockito",
+        "Swagger",
+        "Postman",
+        "Unit Testing",
+        "API Testing",
       ],
+    },
+    {
+      category: "Application Servers & Reporting",
+      skills: ["Apache Tomcat", "SSRS"],
     },
     {
       category: "Development Tools",
@@ -66,6 +86,8 @@ function Skills() {
         "Spring Tool Suite",
         "Jira",
         "Confluence",
+        "SSMS",
+        "Squirrel SQL",
       ],
     },
     {
@@ -75,8 +97,31 @@ function Skills() {
         "Scrum",
         "Kanban",
         "Code Reviews",
-        "Unit Testing",
-        "CI/CD",
+        "Production Support",
+        "Application Maintenance",
+        "Defect Resolution",
+      ],
+    },
+    {
+      category: "Industry Domains",
+      skills: [
+        "Financial Services",
+        "Pension & Benefits",
+        "Auto Insurance",
+        "Healthcare",
+        "Prescription Management",
+      ],
+    },
+    {
+      category: "Frontend Technologies",
+      skills: [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "React.js",
+        "Angular",
+        "Node.js",
       ],
     },
   ];
@@ -85,7 +130,7 @@ function Skills() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -118,9 +163,9 @@ function Skills() {
             Technical Skills
           </h1>
 
-          <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-            Technologies and tools I use to design, develop, test, and deploy
-            reliable backend applications.
+          <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+            Technologies, platforms, and development practices I use to build,
+            test, maintain, and deploy reliable enterprise backend applications.
           </p>
         </motion.div>
 

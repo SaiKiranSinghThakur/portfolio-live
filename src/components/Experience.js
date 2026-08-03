@@ -9,22 +9,25 @@ function Experience() {
       role: "Software Developer",
       location: "Halifax, NS",
       dates: "Dec 2022 - Jun 2024",
+
       summary:
         "Worked on a Defined Benefits application supporting participant plans, earnings, employment events, accounts, eligibility, employee service, and pension-related calculations.",
+
       highlights: [
         "Developed and enhanced backend features using Java 8 and Spring based on client-specific plan requirements.",
         "Analyzed business requirements and participated in technical design, development, testing, and defect resolution.",
         "Developed and optimized SQL queries for application functionality and data validation.",
         "Worked with Maven, Git, Bitbucket, GitHub, and Jenkins for builds, version control, and CI/CD.",
-        "Performed peer code reviews and collaborated with QA, Business Analysts, and Solution Architects.",
-        "Contributed to the migration of application components from Java 8 to Java 11.",
+        "Performed peer code reviews and contributed to the migration of application components from Java 8 to Java 11.",
       ],
+
       teamCollaboration: [
         "Collaborated with Business Analysts, Solution Architects, QA Engineers, and distributed development teams across Canada, the United States, and India to deliver client-specific business requirements.",
         "Worked closely with offshore QA teams to investigate defects, validate fixes, and support monthly production releases.",
         "Participated in Agile Scrum ceremonies including sprint planning, daily stand-ups, sprint reviews, and retrospectives.",
         "Performed peer code reviews, shared technical knowledge with new team members, and collaborated on solution discussions during Scrum meetings.",
       ],
+
       technologies: [
         "Java 8",
         "Java 11",
@@ -42,50 +45,82 @@ function Experience() {
         "Confluence",
       ],
     },
+
     {
       company: "The Co-operators",
       role: "Software Developer",
       location: "Guelph, ON",
       dates: "Dec 2020 - Oct 2022",
+
       summary:
-        "Worked on an Auto Insurance Claims Processing application, developing backend modules and integrations that supported claims-related business operations.",
+        "Worked on the Guidewire ClaimCenter application, contributing to the Claims Calculation Module responsible for processing vehicle damage claims based on policy coverage, customer information, vehicle details, and insurer-defined business rules.",
+
       highlights: [
-        "Developed new features and resolved application defects using Java 11.",
-        "Used Spring JDBC to perform database operations and integrate application components with the database.",
-        "Developed batch-processing jobs using Spring Batch.",
-        "Implemented application features using exception handling and multithreading.",
-        "Developed and maintained business rules using the Drools Rules Engine.",
-        "Built REST APIs to process database data and integrate with external REST services.",
+        "Developed and enhanced backend features using Java 11 and the Spring Framework by implementing new business requirements and supporting insurance plan and policy changes.",
+        "Participated in requirement analysis, technical design, development, testing, defect resolution, production support, and application maintenance.",
+        "Developed REST APIs using the Spring MVC framework to integrate the Claims Calculation Module with external services.",
+        "Performed database operations using Spring JDBC, implemented batch processing with Spring Batch, and maintained business rules using the Drools Rules Engine.",
+        "Used Guidewire ClaimCenter to validate policy and claim information, verified application behavior after implementing backend code changes, ran the application locally for testing and debugging, and used Postman to validate REST API request and response payloads.",
+        "Deployed and tested the application on Apache Tomcat to verify functionality and ensure successful application deployment.",
+        "Managed application builds using Maven and maintained source code using Git while tracking user stories, defects, and development tasks in Jira.",
       ],
+
+      teamCollaboration: [
+        "Collaborated with offshore QA Engineers and Business Analysts to analyze business requirements, validate fixes, and deliver application enhancements.",
+        "Worked in an Agile Scrum environment, participating in sprint planning, daily stand-ups, sprint reviews, and retrospectives.",
+        "Worked closely with dedicated Claims teams while coordinating with separate Home Insurance and Investment teams for cross-functional business requirements when needed.",
+        "Provided production support, investigated reported issues, and collaborated with QA during regression testing before production releases.",
+      ],
+
       technologies: [
         "Java 11",
+        "Spring Framework",
+        "Spring MVC",
         "Spring JDBC",
         "Spring Batch",
+        "Guidewire ClaimCenter",
+        "Drools Rules Engine",
         "REST APIs",
+        "Postman",
+        "Apache Tomcat",
         "Maven",
-        "Drools",
-        "JUnit",
-        "Mockito",
-        "MySQL",
+        "Git",
         "Jira",
         "Confluence",
+        "MySQL",
       ],
     },
+
     {
       company: "Atos Syntel",
-      role: "Associate Java Developer",
+      role: "Associate Software Developer",
       location: "Pune, India",
       dates: "May 2019 - Dec 2019",
+
       summary:
-        "Worked on a healthcare application used to manage patient medication details and support integrations with dependent applications.",
+        "Worked on a Healthcare Prescription Management application that supported patient prescription processing, medication management, insurance coverage validation, prescription claims, and payment processing based on healthcare and business requirements.",
+
       highlights: [
-        "Developed backend microservices using Spring Boot.",
-        "Implemented asynchronous producer-consumer communication using Apache Kafka.",
-        "Used Docker to containerize and run application services.",
-        "Used Swagger for API testing and Mockito for unit testing.",
-        "Developed SQL queries, stored procedures, and packages for data retrieval and validation.",
-        "Collaborated with Database Administrators, QA Engineers, Business Analysts, and Client Representatives.",
+        "Developed and enhanced backend microservices using Java 8 and Spring Boot.",
+        "Participated in requirement analysis, development, testing, defect resolution, production support, and application maintenance.",
+        "Implemented new business requirements by enhancing prescription processing workflows, insurance plans, claims processing, and payment validation logic.",
+        "Resolved defects related to patient prescriptions, insurance coverage, claim processing, payment calculations, and business rules.",
+        "Developed REST APIs using Spring Boot to integrate application components with dependent healthcare services.",
+        "Implemented asynchronous messaging using Apache Kafka for reliable producer-consumer communication between application components.",
+        "Containerized and ran application services using Docker for development and deployment.",
+        "Developed SQL queries, stored procedures, and database packages for data retrieval, insertion, validation, and troubleshooting.",
+        "Developed and maintained SSRS reports to monitor daily processing volumes, application performance, and operational data.",
+        "Used Swagger to validate REST API functionality and Mockito for unit testing.",
+        "Managed dependencies and application builds using Maven and tracked user stories, development tasks, and defects using Jira.",
       ],
+
+      teamCollaboration: [
+        "Collaborated with Database Administrators, QA Engineers, Business Analysts, and client representatives to analyze requirements and deliver application enhancements.",
+        "Worked closely with QA and database teams to investigate production issues, validate application data, and resolve prescription and payment-processing defects.",
+        "Participated in technical discussions, defect reviews, application testing, and knowledge-sharing activities throughout the software development lifecycle.",
+        "Coordinated with dependent application teams to monitor REST API integrations and ensure reliable healthcare data exchange.",
+      ],
+
       technologies: [
         "Java 8",
         "Spring Boot",
@@ -95,7 +130,11 @@ function Experience() {
         "Docker",
         "Swagger",
         "Maven",
+        "Mockito",
+        "SQL",
         "MySQL",
+        "Stored Procedures",
+        "Database Packages",
         "SSRS",
         "IntelliJ IDEA",
         "Jira",
@@ -198,6 +237,23 @@ function Experience() {
             </ul>
           </div>
 
+          {experience.teamCollaboration?.length > 0 && (
+            <div className="mt-7">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Team Collaboration
+              </h3>
+
+              <ul className="space-y-3 text-gray-700">
+                {experience.teamCollaboration.map((item) => (
+                  <li key={item} className="flex gap-3 leading-relaxed">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-green-600" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="mt-7">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Technologies
@@ -215,7 +271,7 @@ function Experience() {
             </div>
           </div>
 
-          <div className="mt-8 flex justify-between">
+          <div className="mt-8 flex justify-between gap-4">
             <button
               type="button"
               onClick={previous}
